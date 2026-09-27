@@ -1,4 +1,3 @@
-# Smart-surveillance-system
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
@@ -23,14 +22,26 @@ If you are developing a production application, we recommend enabling type-aware
   "options": {
     "typeAware": true
   },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+  # Sentinel AI
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+  A browser-based surveillance dashboard with local object detection. Connect a camera to detect people, vehicles, and common objects with TensorFlow.js COCO-SSD.
 
+  ## Run locally
 
+  ```sh
+  npm install
+  npm run dev
+  ```
 
+  Open the local URL printed by Vite. Camera access requires `localhost` or HTTPS. Select **Connect camera** and approve the browser permission prompt. The object-detection model is loaded on first connection; its model weights require an internet connection.
+
+  ## Privacy and limits
+
+  Video frames are processed in the browser and are not recorded or uploaded by this app. The model runtime is downloaded on first use. Detection is assistive and can miss or misclassify objects; verify important alerts independently. No identity recognition, persistent recording, or backend service is included.
+
+  ## Checks
+
+  ```sh
+  npm run build
+  npm run lint
+  ```
